@@ -1,10 +1,26 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  mode: "jit",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  safelist: [
+    {
+      pattern: /^bg-/,
+      variants: ["sm", "md", "lg", "hover", "focus"], // Optional: specify variants
+    },
+    {
+      pattern: /^text-/,
+      variants: ["hover", "focus"], // Optional: specify variants
+    },
+    {
+      pattern: /^p-/,
+      variants: ["sm", "md", "lg"], // Optional: specify variants
+    },
+    // Add other patterns as needed
   ],
   theme: {
     extend: {
