@@ -6,11 +6,11 @@ import ChangeHistoryRoundedIcon from "@mui/icons-material/ChangeHistoryRounded";
 import CodeRoundedIcon from "@mui/icons-material/CodeRounded";
 import Link from "next/link";
 import { useAuth } from "@clerk/nextjs";
-// import connect from "./lib/connect";
+import connect from "@/lib/connect";
 import DrawIcon from "@mui/icons-material/Draw";
 import Image from "next/image";
 function page() {
-  // connect();
+  connect();
   return (
       <div className="poppins">
         <Navbar />
